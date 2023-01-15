@@ -1,29 +1,231 @@
-body, #root{
+html{
+    width: 100%;
+}
+body,
+#root {
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
 }
 .App {
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
     align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
 }
-#header{
+
+#header {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     flex: 0 1 auto;
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: hsla(0, 18%, 7%, 0.308);
+    opacity: 0.5;
+    font-size: 1.2rem;
+    /* z-index: 0; */
 }
-.active {
-    color: red;
+#header:hover{
+    background-color: white;
+
 }
-footer {
-    flex: 0 1 auto;
+#header:hover a {
+    color: black;
+    opacity: 1;
+    transition: opacity 500ms;
+    z-index: 1;
 }
-.content {
-    height: 100%;
+#links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+#links a {
+    text-decoration: none;
+    /* padding: 0.5rem; */
+    color: white;
+    position: relative;
+    opacity: 1;
+}
+#links a:hover{
+    text-decoration: underline;
+}
+#cart-shortcut{
+    position: relative;
+}
+#items-count{
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 30%;
+    padding: 0.4rem;
+}
+/*                */
+/*                */
+/* LANDING PAGE   */
+video {
     width: 100%;
+    height: auto;
+}
+.landing-page {
+    overflow: hidden;
+}
+
+#citation {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: auto;
+}
+
+p.intro {
+    font-size: 1.3rem;
+    animation: fadeIn 8000ms forwards;
+    width: 100vw;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#vitrine {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 1rem;
+    width: 80vw;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#vitrine>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.vitrine-items {
+    display: flex;
+    flex-direction: column;
+}
+
+/*           */
+/* SHOP PAGE */
+/*           */
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+.carrousel{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+.product {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container {
+    height: 340px;
+    width: 340px;
+    border: 1px solid black;
+    display: flex;
+}
+
+img[alt='watch-carrousel'] {
+    height: 300px;
+    width: auto;
+    margin: auto;
+}
+img[alt='watch-display'] {
+    height: 600px;
+    width: auto;
+    margin: auto;
+}
+/* img[alt='watch']:hover {
+    border-bottom: 1px solid black;
+} */
+.button-car{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: hsla(0, 3%, 70%, 0.74); */
+}
+img.arrow {
+    z-index: -1;
+    max-width: 100%;
+}
+img.arrow.left {
+    transform: rotate(180deg);
+}
+.shop-carrousel-buttons-container{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+}
+button.add, button.remove{
+    width: 100px 
+}
+.shop-item-vitrine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+/* SINGLE ITEM STYLING */
+/*                     */
+/*                     */
+.item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.added-item{
+    display: flex;
+    flex-direction: row;
+}
+.added-item img{
+    height: 180px;
+    width: auto;
 }

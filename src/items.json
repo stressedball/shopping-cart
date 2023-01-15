@@ -1,0 +1,40 @@
+{
+    "items" : [
+        {
+            "path" : "../watches/rolex-sea-dweller.webp",
+            "name" : "Rolex Sea Dweller",
+            "price" : "17850",
+            "size" : "43",
+            "ref" : "126603",
+            "type" : "diver",
+            "description" : "Oyster, Oystersteel and yellow gold. The king of divers."
+        }, 
+        {
+            "path" : "../watches/tudor-pelagos-39.webp",
+            "name" : "Tudor Pelagos",
+            "price" : "4550",
+            "size" : "39",
+            "ref" : "M25407N-0001",
+            "type" : "diver",
+            "description" : "Manufacture Calibre MT5400 (COSC). Unidirectional rotating bezel. Titanium bracelet"
+        },
+        {
+            "path" : "../watches/longines-the-longines-master-collection-l2-919-4-78-3.webp",
+            "name" : "The Longines Master Collection",
+            "price" : "2540",
+            "size" : "42",
+            "ref" : "L2.919.4.78.3",
+            "type" : "dress",
+            "description" : "Automatic. Sapphire glass."
+        },
+        {
+            "path" : "../watches/cartier-tank.jpg",
+            "name" : "Tank Must Watch",
+            "price" : "2980",
+            "size" : "29.5",
+            "ref" : "",
+            "type" : "dress",
+            "description" : "Steel. Synthetic sapphire"
+        }
+    ]
+}
