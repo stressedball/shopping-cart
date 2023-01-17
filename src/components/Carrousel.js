@@ -30,7 +30,7 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                             {el.price}
                         </p>
                         <Link to={`/watch/${linkCategory.category}/${el.id}`} >
-                            <button role='more-info-test' >
+                            <button role='more-info-test' className='more-info'>
                                 More info
                             </button>
                         </Link>

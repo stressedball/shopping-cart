@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { itemsWithId } from "../App"
 
@@ -26,8 +27,8 @@ export default function ItemDisplay({ addToCart }) {
             navigate(`/watch/${params.category}/${categoryItems[tempIndex].id}`)
         }
     }
-    const handleClick = (e) => { 
-        addToCart(e.target.id) 
+    const handleClick = (e) => {
+        addToCart(e.target.id)
     }
     const handleReturnToCategory = () => {
         navigate(`/shopping/${params.category}`)
@@ -48,15 +49,11 @@ export default function ItemDisplay({ addToCart }) {
                             <p>Size : {watch.size}</p>
                             <p>Details : {watch.description}</p>
                             <div className="add-to-cart">
-                                <button onClick={handleClick} id={watch.id}>
-                                    Add to cart.
-                                </button>                    
+                                <button onClick={handleClick} id={watch.id}>Add to cart</button>
                             </div>
                         </div>
                     </div>
-                    <div >
-                        <img className='arrow right' src='../../svg/right-arrow-svgrepo-com.svg' id='right' data-handle={watch.id} onClick={getNext} alt='arrow-navigation'></img>
-                    </div>
+                    <img className='arrow right' src='../../svg/right-arrow-svgrepo-com.svg' id='right' data-handle={watch.id} onClick={getNext} alt='arrow-navigation'></img>
                 </div>
             </div>
             <div className="return-container">

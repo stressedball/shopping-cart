@@ -25,47 +25,36 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Categories status={videoReady}/>
+            <Categories status={videoReady} />
         </>
     )
 }
 
-const Categories = ({status}) => {
-    // to avoid having the scroll event listener displayed
-
-    // const pilot = Object.values(listOfItems)
-    // const racer = Object.values(listOfItems)
-
-    const field = Object.values(listOfItems)[0].filter(el => el.type === 'field').map(el => {
-        return (
-            // <h4 key={el.name}>{el.name}</h4>
-            <img src={el.path} alt='landing-page'></img>
-        )
-    });
-    const dress = Object.values(listOfItems)[0].filter(el => el.type === 'dress').map(el => {
-        return (
-            // <h4 key={el.name}>{el.name}</h4>
-            <img src={el.path} alt='landing-page'></img>
-        )
-    });
-    const diver = Object.values(listOfItems)[0].filter(el => el.type === 'diver').map(el => {
-        return (
-            // <h4 key={el.name}>{el.name}</h4>
-            <img src={el.path} alt='landing-page'></img>
-        )
-    });
+const Categories = ({ status }) => {
+    // Making a featured watch that will select a random watch for each category
+    const randomIndex = Math.trunc((Math.random() * 5))
+    const racer = Object.values(listOfItems)[0].filter(el => el.type === 'racer')[randomIndex]
+    const pilot = Object.values(listOfItems)[0].filter(el => el.type === 'pilot')[randomIndex]
+    const field = Object.values(listOfItems)[0].filter(el => el.type === 'field')[randomIndex]
+    const dress = Object.values(listOfItems)[0].filter(el => el.type === 'dress')[randomIndex]
+    const diver = Object.values(listOfItems)[0].filter(el => el.type === 'diver')[randomIndex]
     // Playing around to make vitrine's elements slide in visually on scroll
     // revealVitrine() is called from the useEffect
     // gets the current window height and adds class if top of element is within specified range
     const revealVitrine = () => {
         const vitrines = document.querySelectorAll('.vitrine-container')
-        const windowHeight = window.innerHeight 
+        const lorem = document.querySelector('.lorem')
+        const loremTop = lorem.getBoundingClientRect().top
+        const windowHeight = window.innerHeight
 
         if (document.querySelector('.vitrine-title').getBoundingClientRect().top < windowHeight - 80) {
             document.querySelector('.vitrine-title').classList.add('reveal')
         } else {
             document.querySelector('.vitrine-title').classList.remove('reveal')
         }
+
+        if (loremTop < windowHeight - 100) lorem.classList.add('reveal')
+        else lorem.classList.remove('reveal')
 
         for (let el of vitrines) {
             const elTop = el.getBoundingClientRect().top
@@ -88,45 +77,95 @@ const Categories = ({status}) => {
     return (
         <div id="vitrine">
             <h3 className="vitrine-title">Our selection of timekeepers</h3>
-            <div className="vitrine-container">
-                <div className="maquette">
-                    <p>Check our classy choices</p>
-                    <img src="../vitrines/dress.jpeg"></img>
+            <p className="lorem">Est reprehenderit incididunt esse enim in consectetur veniam. Eiusmod ullamco amet aliqua nisi exercitation duis id et nisi esse duis tempor occaecat. Nostrud dolor non elit non cillum consectetur id non et dolore excepteur reprehenderit do.</p>
+            <div className="vitrine-container dress">
+                <div className="vitrine-photo-credits">
+                    Photo de <a href="https://unsplash.com/@sammgrdichian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sam Mgrdichian</a> sur <a href="https://unsplash.com/fr/s/photos/classy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
                 </div>
+                <p>Check our classy choices</p>
                 <div className="vitrine-category">
                     <div className="vitrine-items" >
-                        {dress}
+                        <div className='featured'>
+                            <p>Featured</p>
+                            <h5>{dress.name}</h5>
+                        </div>
+                        <img src={`../${dress.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/dress' >
                         <button role='test' className="dress">Discover more</button>
                     </Link>
                 </div>
             </div>
-            <div className="vitrine-container">
-                <div className="maquette">
-                    <p>Conquer the depths of the oceans</p>
-                    <img src="../vitrines/deep.jpeg"></img>
+            <div className="vitrine-container deep">
+                <div className="vitrine-photo-credits">
+                    Photo credits : <a href="https://unsplash.com/@alexrose?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Rose</a> sur <a href="https://unsplash.com/fr/s/photos/deep-sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
+                <p>Conquer the depths of the oceans</p>
                 <div className="vitrine-category">
                     <div className="vitrine-items" >
-                        {diver}
+                        <div className='featured'>
+                            <p>Featured</p>
+                            <h5>{diver.name}</h5>
+                        </div>
+                        <img src={`../${diver.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/diver'>
                         <button className="diver">Discover more</button>
                     </Link>
                 </div>
             </div>
-            <div className="vitrine-container">
-                <div className="maquette">
-                    <p>Get to the top of the world...</p>
-                    <img src="../vitrines/field.jpeg"></img>
+            <div className="vitrine-container field">
+                <div className="vitrine-photo-credits">
+                   Photo de <a href="https://unsplash.com/@damianpatkowski?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Damian Patkowski</a> sur <a href="https://unsplash.com/fr/s/photos/field?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
+                <p>Get to the top of the world...</p>
                 <div className="vitrine-category">
                     <div className="vitrine-items" >
-                        {field}
+                        <div className='featured'>
+                            <p>Featured</p>
+                            <h5>{field.name}</h5>
+                        </div>
+                        <img src={`../${field.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/field'>
                         <button className="field">Discover more</button>
+                    </Link>
+                </div>
+            </div>
+            <div className="vitrine-container pilot">
+                <div className="vitrine-photo-credits">
+                    Photo de <a href="https://unsplash.com/@cleipelt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris Leipelt</a> sur <a href="https://unsplash.com/fr/s/photos/pilot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
+                <p>Find the perfect match for your travels</p>
+                <div className="vitrine-category">
+                    <div className="vitrine-items" >
+                        <div className='featured'>
+                            <p>Featured</p>
+                            <h5>{pilot.name}</h5>
+                        </div>
+                        <img src={`../${pilot.path}`} alt='vitrine-item-watch'></img>
+                    </div>
+                    <Link to='shopping/pilot'>
+                        <button className="pilot">Discover more</button>
+                    </Link>
+                </div>
+            </div>
+            <div className="vitrine-container racer">
+                <div className="vitrine-photo-credits">
+                    Photo de <a href="https://unsplash.com/@rblumbergs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ralfs Blumbergs</a> sur <a href="https://unsplash.com/fr/s/photos/racing?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
+                <p>Our collection for the sports fans</p>
+                <div className="vitrine-category">
+                    <div className="vitrine-items" >
+                        <div className='featured'>
+                            <p>Featured</p>
+                            <h5>{racer.name}</h5>
+                        </div>
+                        <img src={`../${racer.path}`} alt='vitrine-item-watch'></img>
+                    </div>
+                    <Link to='shopping/racer'>
+                        <button className="racer">Discover more</button>
                     </Link>
                 </div>
             </div>

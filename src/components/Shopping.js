@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Carrousel from './Carrousel'
 
 export default function Shopping({ cart, addToCart, removeItem }) {
-    const categories = ['dress', 'diver', 'field']
+    const categories = ['dress', 'diver', 'field', 'pilot', 'racer']
     const linkCategory = useParams()
     const navigate = useNavigate()
     const currentIndex = categories.filter(el => el === linkCategory.category)
