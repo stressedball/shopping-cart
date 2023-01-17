@@ -1,13 +1,13 @@
-import { Routes, Route, useParams} from 'react-router-dom'
+import { Routes, Route, useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import arrow from '../svg/right-arrow-svgrepo-com.svg'
 import Carrousel from './Carrousel'
-const categories = ['dress', 'diver']
 
-export default function Shopping({cart, addToCart, removeItem}) {
+export default function Shopping({ cart, addToCart, removeItem }) {
+    const categories = ['dress', 'diver', 'field']
     const linkCategory = useParams()
     const navigate = useNavigate()
     const currentIndex = categories.filter(el => el === linkCategory.category)
+    // 2 functions below getPrevious and getNext serve to navigate between categories
     const getPrevious = () => {
         if (categories.indexOf(`${currentIndex}`) - 1 < 0) {
             navigate(`/shopping/${categories[categories.length - 1]}`)
@@ -25,16 +25,16 @@ export default function Shopping({cart, addToCart, removeItem}) {
     return (
         <div className='shop-container' role='shopping'>
             <h3>Discover our {linkCategory.category} collection</h3>
-            <div className='carrousel'>
-                <div id='left' key='button-left' className='button-car' onClick={getPrevious}>
-                    <img className='arrow left' src={arrow} alt='arrow-navigation'></img>
+            <div className='carrousel-shop-page'>
+                <>
+                <img className='arrow left' src='../svg/right-arrow-svgrepo-com.svg' alt='arrow-navigation-left' onClick={getPrevious}></img>
+                </>
+                <div className='carrousel-container'>
+                    <Routes>
+                        <Route path={`${linkCategory.category}`} element={<Carrousel cart={cart} addToCart={addToCart} removeItem={removeItem} />} />
+                    </Routes>
                 </div>
-                <Routes>
-                    <Route path={`${linkCategory.category}`} element={<Carrousel cart={cart} addToCart={addToCart} removeItem={removeItem}/>}/>
-                </Routes>
-                <div id='right' key='button-right' className='button-car' onClick={getNext}>
-                    <img className='arrow right' src={arrow} alt='arrow-navigation'></img>
-                </div>
+                <img className='arrow right' src='../svg/right-arrow-svgrepo-com.svg' alt='arrow-navigation-right' onClick={getNext}></img>
             </div>
         </div>
     )

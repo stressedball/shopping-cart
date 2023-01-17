@@ -1,6 +1,14 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+html {
     width: 100%;
 }
+
 body,
 #root {
     padding: 0;
@@ -9,18 +17,28 @@ body,
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: black;
 }
+
 .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     justify-content: space-between;
+    /* gap: 2.5rem; */
+    font-family: 'Cormorant Garamond', serif;
+}
+
+footer {
+    flex: 0 1 auto;
+    padding: 1rem;
+    text-align: center;
 }
 
 #header {
@@ -36,22 +54,27 @@ body,
     opacity: 0.5;
     font-size: 1.2rem;
     /* z-index: 0; */
+    align-items: center;
 }
-#header:hover{
+
+#header:hover {
     background-color: white;
 
 }
+
 #header:hover a {
     color: black;
     opacity: 1;
     transition: opacity 500ms;
     z-index: 1;
 }
+
 #links {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
+
 #links a {
     text-decoration: none;
     /* padding: 0.5rem; */
@@ -59,20 +82,28 @@ body,
     position: relative;
     opacity: 1;
 }
-#links a:hover{
+
+#links a:hover {
     text-decoration: underline;
 }
-#cart-shortcut{
-    position: relative;
+
+#cart-shortcut {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
 }
-#items-count{
-    position: absolute;
+
+#items-count {
     right: 0;
     font-size: 1.2rem;
-    border: 1px solid black;
-    border-radius: 30%;
     padding: 0.4rem;
+    text-decoration: none !important;
 }
+
+#items-count:active {
+    text-decoration: none;
+}
+
 /*                */
 /*                */
 /* LANDING PAGE   */
@@ -80,8 +111,13 @@ video {
     width: 100%;
     height: auto;
 }
+
 .landing-page {
     overflow: hidden;
+}
+
+img[alt='landing-page'] {
+    max-width: 5vw;
 }
 
 #citation {
@@ -104,6 +140,11 @@ p.intro {
     text-align: center;
 }
 
+p.intro:nth-of-type(1) {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -122,20 +163,53 @@ p.intro {
     width: 80vw;
     align-items: center;
     gap: 2rem;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    /* margin-top: 5vh; */
+    /* margin-bottom: 5vh; */
+    margin: auto;
 }
 
-#vitrine>div {
+.vitrine-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     border: 1px solid black;
+    animation: vitrine-fade-out 1500ms forwards linear;
+}
+
+.vitrine-title {
+    animation: vitrine-fade-out 1500ms forwards linear;
+}
+
+.reveal {
+    animation: vitrine-fade-in 1500ms forwards ease-out;
+}
+
+@keyframes vitrine-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vitrine-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
 }
 
 .vitrine-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /*           */
@@ -144,16 +218,36 @@ p.intro {
 .shop-container {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    justify-content: center;
+    /* justify-content: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 3rem; */
+    flex: 1 0 auto;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 5rem 0 5rem;
 }
-.carrousel{
+
+.shop-item-vitrine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carrousel-shop-page {
     display: flex;
     flex-direction: row;
     gap: 0.8rem;
 }
+
+.carrousel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
 .product {
     width: 350px;
     height: 400px;
@@ -161,6 +255,14 @@ p.intro {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.shop-carrousel-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
 }
 
 .img-container {
@@ -175,57 +277,153 @@ img[alt='watch-carrousel'] {
     width: auto;
     margin: auto;
 }
-img[alt='watch-display'] {
-    height: 600px;
-    width: auto;
-    margin: auto;
-}
+
 /* img[alt='watch']:hover {
     border-bottom: 1px solid black;
 } */
-.button-car{
+img[alt='add-svg'],
+img[alt='remove-svg'] {
     width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: hsla(0, 3%, 70%, 0.74); */
 }
+
 img.arrow {
-    z-index: -1;
-    max-width: 100%;
+    position: fixed;
+    width: 40px;
+}
+img.arrow.right{
+    top: 30vh;
+    right: 50px;
 }
 img.arrow.left {
     transform: rotate(180deg);
+    top: 30vh;
+    left: 50px;
 }
-.shop-carrousel-buttons-container{
-    display: flex;
-    flex-direction: row ;
-    justify-content: center;
-    gap: 0.4rem;
-    width: 100%;
-}
-button.add, button.remove{
-    width: 100px 
-}
-.shop-item-vitrine{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
+
+
 /* SINGLE ITEM STYLING */
 /*                     */
 /*                     */
-.item-container{
+.item-vitrine {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.carrousel-watch-display {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    /* width: clamp(40vw, 50vw, 60vw); */
+}
+
+.item-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.added-item{
+
+.watch-display-container {
+    width: clamp(200px, 300px, 400px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img[alt='watch-display'] {
+    max-width: 100%;
+    margin: auto;
+}
+
+.description-container {
+    width: clamp(200px, 300px, 400px);
+}
+
+.description-container h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6rem;
+}
+
+.return-container {
+    padding: 3rem;
+}
+
+/*                   */
+/*  CHECKOUT PAGE    */
+/*                   */
+.shop-list-container {
+    /* height: 100%; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    align-items: center;
+    padding: 0 5rem 0 5rem;
+}
+
+.items-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
-.added-item img{
-    height: 180px;
-    width: auto;
+
+.added-item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    /* width: clamp(200px, 400px, 600px); */
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    height: clamp(300px, 340px, 380px);
+}
+
+.cart-img-container {
+    flex: 0 1 auto;
+    width: clamp(100px, 200px, 300px);
+}
+
+img[alt='cart-product-display'] {
+    max-width: 100%;
+}
+
+.added-item-description {
+    display: flex;
+    flex-direction: column;
+    width: clamp(100px, 140px, 180px);
+}
+
+@media screen and (max-width : 520px) {
+    .added-item-description {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width : 1100px) {
+    #citation {
+        position: relative;
+        color: black;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .carrousel-watch-display {
+        gap: 0;
+        font-size: 1rem;
+    }
+
+    .item-container {
+        margin: 0;
+    }
+
+    .watch-display-container {
+        width: clamp(100px, 200px, 300px);
+    }
 }

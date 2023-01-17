@@ -17,6 +17,33 @@
             "ref" : "M25407N-0001",
             "type" : "diver",
             "description" : "Manufacture Calibre MT5400 (COSC). Unidirectional rotating bezel. Titanium bracelet"
+        }, 
+        {
+            "path" : "../watches/omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422003002-list.jpg",
+            "name" : "Omega Seamaster diver 300m",
+            "price" : "8900",
+            "size" : "42",
+            "ref" : "210.30.42.20.03.002",
+            "type" : "diver",
+            "description" : "James Bond 60th anniversary. 300m water resistant. A classic in the worlds of watches. Stainless steel. Sapphire glass."
+        },
+        {
+            "path" : "../watches/watch-collection-the-longines-legend-diver-watch-l3-774-4-90-2-560x660-1667532937.webp",
+            "name" : "The Longines Legend Diver",
+            "price" : "2400",
+            "size" : "42",
+            "ref" : "L3.774.4.90.2",
+            "type" : "diver",
+            "description" : "A rich history. Elegant yet reliable. 300m water resistant. Stainless steel. Sapphire glass."
+        },
+        {
+            "path" : "../watches/SLA023J1.png",
+            "name" : "Seiko Prospex",
+            "price" : "3200",
+            "size" : "44.3",
+            "ref" : "SLA023",
+            "type" : "diver",
+            "description" : "Lumibrite applied. The quality and expertise of Japanese watchmaker Seiko. 300m water resistant. Stainless steel. Sapphire glass."
         },
         {
             "path" : "../watches/longines-the-longines-master-collection-l2-919-4-78-3.webp",
@@ -34,7 +61,25 @@
             "size" : "29.5",
             "ref" : "",
             "type" : "dress",
-            "description" : "Steel. Synthetic sapphire"
+            "description" : "Stainless steel. Synthetic sapphire"
+        }, 
+        {
+            "path" : "../watches/SBGY027G.png",
+            "name" : "Grand Seiko Elegance",
+            "price" : "9200",
+            "size" : "43.7",
+            "ref" : "SBGY027",
+            "type" : "dress",
+            "description" : "Sapphire glass. Stainless steel. 30 rubies. Anti-reflection coating."
+        }, 
+        {
+            "path" : "../watches/h69529933.webp",
+            "name" : "Hamilton Khaki Field", 
+            "price" : "645",
+            "size" : "42", 
+            "ref" : "H69529933", 
+            "type" : "field", 
+            "description" : "One of the most emblematic models of the company. Nato bracelet or nylon. Stainless steel."
         }
     ]
 }

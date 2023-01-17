@@ -29,19 +29,19 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                         <p className='price'>
                             {el.price}
                         </p>
+                        <Link to={`/watch/${linkCategory.category}/${el.id}`} >
+                            <button role='more-info-test' >
+                                More info
+                            </button>
+                        </Link>
                     </div>
                     <div className='shop-carrousel-buttons-container'>
-                        <button onClick={handleClick} id={el.id} className='add'>Add</button>
+                        <img src='../svg/plus-circle-svgrepo-com.svg' onClick={handleClick} id={el.id} className='add'  alt='add-svg'></img>
                         <p>{
                             cart.filter(item => item[0].id === el.id).length
                         }</p>
-                        <button onClick={handleClick} id={el.id} className='remove'>Remove</button>
+                        <img src='../svg/minus-circle-svgrepo-com.svg' onClick={handleClick} id={el.id} className='remove' alt='remove-svg'></img>
                     </div>
-                    <Link to={`/watch/${el.id}`}>
-                        <button role='more-info-test'>
-                            More info
-                        </button>
-                    </Link>
                 </div>
             )
         }

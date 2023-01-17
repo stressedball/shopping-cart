@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import listOfItems from '../items.json'
-import cart from '../svg/shopping-bag-svgrepo-com.svg'
 
 export default function Header({count}){
     // use random category if user clicks on shopping nav link from home page
@@ -12,9 +11,9 @@ export default function Header({count}){
                 <NavLink to='/' role='home-link'>Home</NavLink>
                 <NavLink to={`/shopping/${category}`} role='shopping-link'>Shop</NavLink>
             </div>
-            <NavLink  to='/cart' role='shopping-cart'>
+            <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}}>
                 <div id='cart-shortcut'>
-                    <img src={cart} width='30px' alt="cart-svg"></img>
+                    <img src='../svg/shopping-bag-svgrepo-com.svg' width='30px' alt="cart-svg"></img>
                     <p id='items-count'>{count}</p>
                 </div>
             </NavLink>

@@ -33,11 +33,11 @@ function App() {
         <Route path='/shopping/*' element={<Shopping cart={sessionCart} addToCart={addToCart} removeItem={removeFromCart}/>} >
           <Route path=':category' element={<Carrousel />} />
         </Route>
-        <Route path='/watch/:id' element={<ItemDisplay addToCart={addToCart} cart={sessionCart} />} />
+        <Route path='/watch/:category/:id' element={<ItemDisplay addToCart={addToCart} cart={sessionCart} />} />
         <Route path='/cart' element={<ShoppingCart cart={sessionCart} removeItem={removeFromCart}/>} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
-      <footer>Made By TS</footer>
+      <footer>Made by TS</footer>
     </div>
   );
 }
