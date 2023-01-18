@@ -4,9 +4,7 @@ export default function ShoppingCart({ cart, removeItem }) {
     const items = itemsInCart.map(el => {
         return (
             <div className="added-item-container" key={el.id}>
-                <div className="cart-img-container">
-                    <img src={el[0].path} alt='cart-product-display'></img>
-                </div>
+                <img src={el[0].path} alt='cart-product-display'></img>
                 <div className="added-item-description">
                     <h3>{el[0].name}</h3>
                     <h5>{el[0].price}</h5>
@@ -18,7 +16,7 @@ export default function ShoppingCart({ cart, removeItem }) {
     let total = 0
     itemsInCart.map(el => total += Number(el[0].price))
     return (
-        <div role={'shop-list'} className='shop-list-container'>
+        <div className='shop-list-container'>
             <h4>Your selection</h4>
             <div className="items-container">
                 {items}

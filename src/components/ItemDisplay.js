@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { itemsWithId } from "../App"
 
@@ -29,6 +28,11 @@ export default function ItemDisplay({ addToCart }) {
     }
     const handleClick = (e) => {
         addToCart(e.target.id)
+        // following lines to style cart animation on add
+        document.querySelector('img[alt="cart-svg"').classList.add('cart-add')
+        setTimeout(() => {
+            document.querySelector('img[alt="cart-svg"').classList.remove('cart-add')
+        }, 400)
     }
     const handleReturnToCategory = () => {
         navigate(`/shopping/${params.category}`)

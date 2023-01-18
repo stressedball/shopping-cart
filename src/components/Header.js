@@ -10,8 +10,9 @@ export default function Header({count}){
             <div id='links'>
                 <NavLink to='/' role='home-link'>Home</NavLink>
                 <NavLink to={`/shopping/${category}`} role='shopping-link'>Shop</NavLink>
+                <NavLink to={'/about'} >About</NavLink>
             </div>
-            <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}}>
+            <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}} className='cart-shortcut-container'>
                 <div id='cart-shortcut'>
                     <img src='../svg/shopping-bag-svgrepo-com.svg' width='30px' alt="cart-svg"></img>
                     <p id='items-count'>{count}</p>

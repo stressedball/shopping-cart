@@ -6,6 +6,7 @@ import Shopping from './components/Shopping';
 import ShoppingCart from './components/ShoppingCart';
 import ItemDisplay from './components/ItemDisplay';
 import Carrousel from './components/Carrousel';
+import About from './components/About';
 import NotFound from './components/NotFound';
 import listOfItems from './items.json';
 import uniqid from 'uniqid';
@@ -26,7 +27,7 @@ function App() {
   }
   itemsWithId = makeItemsIdentifiable();
   return (
-    <div role='app' className="App">
+    <div className="App">
       <Header count={sessionCart.length} />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,6 +36,7 @@ function App() {
         </Route>
         <Route path='/watch/:category/:id' element={<ItemDisplay addToCart={addToCart} cart={sessionCart} />} />
         <Route path='/cart' element={<ShoppingCart cart={sessionCart} removeItem={removeFromCart}/>} />
+        <Route path='/about' element={<About />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <footer>Made by TS</footer>

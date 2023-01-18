@@ -6,6 +6,11 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
     const handleClick = (e) => {
         if (e.target.className === 'add') {
             addToCart(e.target.id)
+            // following lines to style cart animation on add
+            document.querySelector('img[alt="cart-svg"').classList.add('cart-add')
+            setTimeout(() => {
+                document.querySelector('img[alt="cart-svg"').classList.remove('cart-add')
+            }, 400)
         } else {
             for (let i = cart.length - 1; i >=0; i--) {
                 const item = cart[i]
@@ -13,6 +18,11 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                     removeItem(cart.indexOf(item))
                 }
             }
+            // animation for cart for item remove
+            document.querySelector('img[alt="cart-svg"]').classList.add('cart-remove')
+            setTimeout(() => {
+                document.querySelector('img[alt="cart-svg"').classList.remove('cart-remove')
+            }, 400)
         }
     }
     const items = itemsWithId.map(el => {
@@ -30,7 +40,7 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                             {el.price}
                         </p>
                         <Link to={`/watch/${linkCategory.category}/${el.id}`} >
-                            <button role='more-info-test' className='more-info'>
+                            <button className='more-info'>
                                 More info
                             </button>
                         </Link>
@@ -45,6 +55,7 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                 </div>
             )
         }
+        return null
     })
     return items
 }

@@ -11,7 +11,7 @@ export default function Home() {
     }
     return (
         <>
-            <div className='landing-page' role='home'>
+            <div className='landing-page'>
                 <div id="video-wrapper">
                     <video autoPlay muted loop src="./Pocket_Watch_a15___30s___4k_res.mp4" alt='time' onLoadedData={() => onVideoLoad()}>
                     </video>
@@ -58,7 +58,7 @@ const Categories = ({ status }) => {
 
         for (let el of vitrines) {
             const elTop = el.getBoundingClientRect().top
-            if (elTop < windowHeight - 200) {
+            if (elTop < windowHeight - 300) {
                 el.classList.add('reveal')
             } else {
                 el.classList.remove('reveal')
@@ -80,7 +80,7 @@ const Categories = ({ status }) => {
             <p className="lorem">Est reprehenderit incididunt esse enim in consectetur veniam. Eiusmod ullamco amet aliqua nisi exercitation duis id et nisi esse duis tempor occaecat. Nostrud dolor non elit non cillum consectetur id non et dolore excepteur reprehenderit do.</p>
             <div className="vitrine-container dress">
                 <div className="vitrine-photo-credits">
-                    Photo de <a href="https://unsplash.com/@sammgrdichian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sam Mgrdichian</a> sur <a href="https://unsplash.com/fr/s/photos/classy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    Photo credits : <a href="https://unsplash.com/@sammgrdichian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sam Mgrdichian</a> from <a href="https://unsplash.com/fr/s/photos/classy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
                 </div>
                 <p>Check our classy choices</p>
@@ -93,13 +93,13 @@ const Categories = ({ status }) => {
                         <img src={`../${dress.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/dress' >
-                        <button role='test' className="dress">Discover more</button>
+                        <button className="dress">Discover more</button>
                     </Link>
                 </div>
             </div>
             <div className="vitrine-container deep">
                 <div className="vitrine-photo-credits">
-                    Photo credits : <a href="https://unsplash.com/@alexrose?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Rose</a> sur <a href="https://unsplash.com/fr/s/photos/deep-sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    Photo credits : <a href="https://unsplash.com/@alexrose?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alex Rose</a> from <a href="https://unsplash.com/fr/s/photos/deep-sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
                 <p>Conquer the depths of the oceans</p>
                 <div className="vitrine-category">
@@ -117,7 +117,7 @@ const Categories = ({ status }) => {
             </div>
             <div className="vitrine-container field">
                 <div className="vitrine-photo-credits">
-                   Photo de <a href="https://unsplash.com/@damianpatkowski?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Damian Patkowski</a> sur <a href="https://unsplash.com/fr/s/photos/field?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                   Photo credits : <a href="https://unsplash.com/@damianpatkowski?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Damian Patkowski</a> from <a href="https://unsplash.com/fr/s/photos/field?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
                 <p>Get to the top of the world...</p>
                 <div className="vitrine-category">
@@ -135,7 +135,7 @@ const Categories = ({ status }) => {
             </div>
             <div className="vitrine-container pilot">
                 <div className="vitrine-photo-credits">
-                    Photo de <a href="https://unsplash.com/@cleipelt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris Leipelt</a> sur <a href="https://unsplash.com/fr/s/photos/pilot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    Photo credits : <a href="https://unsplash.com/@cleipelt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris Leipelt</a> from <a href="https://unsplash.com/fr/s/photos/pilot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
                 <p>Find the perfect match for your travels</p>
                 <div className="vitrine-category">
@@ -153,7 +153,7 @@ const Categories = ({ status }) => {
             </div>
             <div className="vitrine-container racer">
                 <div className="vitrine-photo-credits">
-                    Photo de <a href="https://unsplash.com/@rblumbergs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ralfs Blumbergs</a> sur <a href="https://unsplash.com/fr/s/photos/racing?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    Photo credits : <a href="https://unsplash.com/@rblumbergs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ralfs Blumbergs</a> from <a href="https://unsplash.com/fr/s/photos/racing?utm_source=unsplash&    utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
                 <p>Our collection for the sports fans</p>
                 <div className="vitrine-category">
