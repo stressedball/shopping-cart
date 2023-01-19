@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/stressedball/static/css/main.0e1de48a.css",
+    "main.js": "/stressedball/static/js/main.6bbb59ec.js",
+    "static/media/deep2.jpg": "/stressedball/static/media/deep2.a0ef0c8a192504f9096e.jpg",
+    "static/media/dress.jpg": "/stressedball/static/media/dress.edf6b3059fba1800c427.jpg",
+    "static/media/field.jpg": "/stressedball/static/media/field.fca3752a286f88fd364b.jpg",
+    "static/media/racer.jpg": "/stressedball/static/media/racer.2d22c9f3f93f3cb92e4b.jpg",
+    "static/media/pilot.jpg": "/stressedball/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
+    "index.html": "/stressedball/index.html",
+    "main.0e1de48a.css.map": "/stressedball/static/css/main.0e1de48a.css.map",
+    "main.6bbb59ec.js.map": "/stressedball/static/js/main.6bbb59ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e1de48a.css",
+    "static/js/main.6bbb59ec.js"
+  ]
+}
