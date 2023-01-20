@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/stressedball/shopping-cart.git/static/css/main.7b9f196c.css",
-    "main.js": "/stressedball/shopping-cart.git/static/js/main.2ed74228.js",
-    "static/media/deep2.jpg": "/stressedball/shopping-cart.git/static/media/deep2.a0ef0c8a192504f9096e.jpg",
-    "static/media/dress.jpg": "/stressedball/shopping-cart.git/static/media/dress.edf6b3059fba1800c427.jpg",
-    "static/media/field.jpg": "/stressedball/shopping-cart.git/static/media/field.fca3752a286f88fd364b.jpg",
-    "static/media/racer.jpg": "/stressedball/shopping-cart.git/static/media/racer.2d22c9f3f93f3cb92e4b.jpg",
-    "static/media/pilot.jpg": "/stressedball/shopping-cart.git/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
-    "index.html": "/stressedball/shopping-cart.git/index.html",
-    "main.7b9f196c.css.map": "/stressedball/shopping-cart.git/static/css/main.7b9f196c.css.map",
-    "main.2ed74228.js.map": "/stressedball/shopping-cart.git/static/js/main.2ed74228.js.map"
+    "main.css": "/stressedball/shopping-cart/static/css/main.5900310a.css",
+    "main.js": "/stressedball/shopping-cart/static/js/main.56b56d1b.js",
+    "static/media/deep2.jpg": "/stressedball/shopping-cart/static/media/deep2.a0ef0c8a192504f9096e.jpg",
+    "static/media/dress.jpg": "/stressedball/shopping-cart/static/media/dress.edf6b3059fba1800c427.jpg",
+    "static/media/field.jpg": "/stressedball/shopping-cart/static/media/field.fca3752a286f88fd364b.jpg",
+    "static/media/racer.jpg": "/stressedball/shopping-cart/static/media/racer.2d22c9f3f93f3cb92e4b.jpg",
+    "static/media/pilot.jpg": "/stressedball/shopping-cart/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
+    "index.html": "/stressedball/shopping-cart/index.html",
+    "main.5900310a.css.map": "/stressedball/shopping-cart/static/css/main.5900310a.css.map",
+    "main.56b56d1b.js.map": "/stressedball/shopping-cart/static/js/main.56b56d1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b9f196c.css",
-    "static/js/main.2ed74228.js"
+    "static/css/main.5900310a.css",
+    "static/js/main.56b56d1b.js"
   ]
 }
