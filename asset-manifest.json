@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/stressedball/shopping-cart.git/static/css/main.7b9f196c.css",
-    "main.js": "/stressedball/shopping-cart.git/static/js/main.1be5188c.js",
+    "main.js": "/stressedball/shopping-cart.git/static/js/main.1f5f4915.js",
     "static/media/deep2.jpg": "/stressedball/shopping-cart.git/static/media/deep2.a0ef0c8a192504f9096e.jpg",
     "static/media/dress.jpg": "/stressedball/shopping-cart.git/static/media/dress.edf6b3059fba1800c427.jpg",
     "static/media/field.jpg": "/stressedball/shopping-cart.git/static/media/field.fca3752a286f88fd364b.jpg",
@@ -9,10 +9,10 @@
     "static/media/pilot.jpg": "/stressedball/shopping-cart.git/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
     "index.html": "/stressedball/shopping-cart.git/index.html",
     "main.7b9f196c.css.map": "/stressedball/shopping-cart.git/static/css/main.7b9f196c.css.map",
-    "main.1be5188c.js.map": "/stressedball/shopping-cart.git/static/js/main.1be5188c.js.map"
+    "main.1f5f4915.js.map": "/stressedball/shopping-cart.git/static/js/main.1f5f4915.js.map"
   },
   "entrypoints": [
     "static/css/main.7b9f196c.css",
-    "static/js/main.1be5188c.js"
+    "static/js/main.1f5f4915.js"
   ]
 }
