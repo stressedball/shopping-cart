@@ -1,0 +1,103 @@
+/*           */
+/* SHOP PAGE */
+/*           */
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 5rem 0 5rem;
+}
+
+.shop-container h3 {
+    font-size: 1.7rem;
+}
+
+.shop-item-vitrine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 1px 5px 0px darkgray;
+    border-radius: 8px;
+}
+
+.carrousel-shop-page {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+.carrousel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.shop-carrousel-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.more-info {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background: darkgrey;
+    border-radius: 8px;
+}
+
+button.more-info:hover {
+    background-color: black;
+    color: white;
+}
+
+.img-container {
+    height: 310px;
+    width: 310px;
+    display: flex;
+}
+
+img[alt='watch-carrousel'] {
+    height: 250px;
+    margin: auto;
+}
+
+img[alt='add-svg'],
+img[alt='remove-svg'] {
+    width: 30px;
+}
+
+img[alt='add-svg']:hover {
+    filter: invert(73%) sepia(10%) saturate(5885%) hue-rotate(40deg) brightness(102%) contrast(85%);
+}
+
+img[alt='remove-svg']:hover {
+    filter: invert(9%) sepia(88%) saturate(6796%) hue-rotate(359deg) brightness(99%) contrast(110%);
+}
+
+img.arrow {
+    width: 40px;
+    box-shadow: 0 1px 1px 1px black;
+    background-color: inherit;
+}
+
+img.arrow:hover {
+    background-color: #67809c;
+}
+
+img.arrow.left {
+    transform: rotate(180deg);
+}

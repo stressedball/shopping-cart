@@ -1,0 +1,97 @@
+
+/* SINGLE ITEM STYLING */
+/*                     */
+/*                     */
+.item-vitrine {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.carrousel-watch-display {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch-display-container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+
+img[alt='watch-display'] {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+.description-container {
+    width: clamp(200px, 300px, 400px);
+    padding: 3rem;
+    width: 500px;
+    height: 400px;
+}
+
+.description-container h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.return-container {
+    padding: 3rem;
+}
+
+.return-container button {
+    width: 170px;
+    padding: 0.7rem;
+    border: none;
+    background: darkgrey;
+    border-radius: 8px;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.add-to-cart button {
+    width: 170px;
+    padding: 0.7rem;
+    border: none;
+    background: darkgrey;
+    border-radius: 8px;
+}
+
+.to-add::after {
+    content: 'Add to collection'
+}
+
+.added-watch::after {
+    content: 'Added to collection';
+}
+
+@media screen and (max-width : 700px) {
+    .watch-display-container {
+        display: flex;
+        justify-content: center;
+        height: 220px;
+        width: 220px;
+    }
+    .description-container{
+        width: 220px;
+    }
+}

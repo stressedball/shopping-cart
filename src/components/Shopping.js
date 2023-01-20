@@ -10,16 +10,16 @@ export default function Shopping({ cart, addToCart, removeItem }) {
     // 2 functions below getPrevious and getNext serve to navigate between categories
     const getPrevious = () => {
         if (categories.indexOf(`${currentIndex}`) - 1 < 0) {
-            navigate(`/shopping/${categories[categories.length - 1]}`)
+            navigate(`/shopping-cart/shopping/${categories[categories.length - 1]}`)
         } else {
-            navigate(`/shopping/${categories[categories.indexOf(`${currentIndex}`) - 1]}`)
+            navigate(`/shopping-cart/shopping/${categories[categories.indexOf(`${currentIndex}`) - 1]}`)
         }
     }
     const getNext = () => {
         if (categories.indexOf(`${currentIndex}`) + 1 > categories.length - 1) {
-            navigate(`/shopping/${categories[0]}`)
+            navigate(`/shopping-cart/shopping/${categories[0]}`)
         } else {
-            navigate(`/shopping/${categories[categories.indexOf(`${currentIndex}`) + 1]}`)
+            navigate(`/shopping-cart/shopping/${categories[categories.indexOf(`${currentIndex}`) + 1]}`)
         }
     }
     return (
