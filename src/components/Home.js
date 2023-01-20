@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import listOfItems from '../items.json';
-
 export default function Home() {
     // The following 3 lines are only used to make sure that the video loads first
     // otherwise Categories will mount components faster and the overall visual result is ugly
@@ -13,7 +12,7 @@ export default function Home() {
         <>
             <div className='landing-page'>
                 <div id="video-wrapper">
-                    <video autoPlay muted loop src={process.env.PUBLIC_URL + "/Pocket_Watch_a15___30s___4k_res.mp4"} alt='time' onLoadedData={() => onVideoLoad()}>
+                    <video playsInLine autoPlay defaultMuted loop src={process.env.PUBLIC_URL + "/Pocket_Watch_a15___30s___4k_res.mp4"} alt='time' onLoadedData={() => onVideoLoad()}>
                     </video>
                     <div id="citation">
                         <p className="intro">
@@ -38,6 +37,7 @@ const Categories = ({ status }) => {
     const field = Object.values(listOfItems)[0].filter(el => el.type === 'field')[randomIndex]
     const dress = Object.values(listOfItems)[0].filter(el => el.type === 'dress')[randomIndex]
     const diver = Object.values(listOfItems)[0].filter(el => el.type === 'diver')[randomIndex]
+
     // Playing around to make vitrine's elements slide in visually on scroll
     // revealVitrine() is called from the useEffect
     // gets the current window height and adds class if top of element is within specified range

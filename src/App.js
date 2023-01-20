@@ -30,8 +30,8 @@ function App() {
     <div className="App">
       <Header count={sessionCart.length} />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/shopping/*' element={<Shopping cart={sessionCart} addToCart={addToCart} removeItem={removeFromCart}/>} >
+        <Route index path='/shopping-cart/*' element={<Home />} />
+        <Route path='/shopping-cart/shopping/*' element={<Shopping cart={sessionCart} addToCart={addToCart} removeItem={removeFromCart}/>} >
           <Route path=':category' element={<Carrousel />} />
         </Route>
         <Route path='/watch/:category/:id' element={<ItemDisplay addToCart={addToCart} cart={sessionCart} />} />

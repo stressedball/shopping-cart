@@ -8,8 +8,8 @@ export default function Header({count}){
     return(
         <div id='header'>
             <div id='links'>
-                <NavLink to='/' role='home-link'>Home</NavLink>
-                <NavLink to={`/shopping/${category}`} role='shopping-link'>Shop</NavLink>
+                <NavLink to='/shopping-cart/' role='home-link'>Home</NavLink>
+                <NavLink to={`/shopping-cart/shopping/${category}`} role='shopping-link'>Shop</NavLink>
                 <NavLink to={'/about'} >About</NavLink>
             </div>
             <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}} className='cart-shortcut-container'>

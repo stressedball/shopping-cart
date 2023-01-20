@@ -35,7 +35,7 @@ export default function ItemDisplay({ addToCart }) {
         }, 400)
     }
     const handleReturnToCategory = () => {
-        navigate(`/shopping/${params.category}`)
+        navigate(`/shopping-cart/shopping/${params.category}`)
     }
     return (
         <>
