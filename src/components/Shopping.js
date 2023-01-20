@@ -27,14 +27,14 @@ export default function Shopping({ cart, addToCart, removeItem }) {
             <h3>Discover our {linkCategory.category} collection</h3>
             <div className='carrousel-shop-page'>
                 <>
-                <img className='arrow left' src='../svg/right-arrow-svgrepo-com.svg' alt='arrow-navigation-left' onClick={getPrevious}></img>
+                <img className='arrow left' src={process.env.PUBLIC_URL + '/svg/right-arrow-svgrepo-com.svg'} alt='arrow-navigation-left' onClick={getPrevious}></img>
                 </>
                 <div className='carrousel-container'>
                     <Routes>
                         <Route path={`${linkCategory.category}`} element={<Carrousel cart={cart} addToCart={addToCart} removeItem={removeItem} />} />
                     </Routes>
                 </div>
-                <img className='arrow right' src='../svg/right-arrow-svgrepo-com.svg' alt='arrow-navigation-right' onClick={getNext}></img>
+                <img className='arrow right' src={process.env.PUBLIC_URL + '/svg/right-arrow-svgrepo-com.svg'} alt='arrow-navigation-right' onClick={getNext}></img>
             </div>
         </div>
     )

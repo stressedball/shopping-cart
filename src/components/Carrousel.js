@@ -30,7 +30,7 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
             return (
                 <div className='shop-item-vitrine' key={el.id}>
                     <div className='img-container'>
-                        <img src={el.path} alt='watch-carrousel'></img>
+                        <img src={process.env.PUBLIC_URL + el.path} alt='watch-carrousel'></img>
                     </div>
                     <div className='item-info'>
                         <p className='name'>
@@ -46,11 +46,11 @@ export default function Carrousel({ cart, addToCart, removeItem }) {
                         </Link>
                     </div>
                     <div className='shop-carrousel-buttons-container'>
-                        <img src='../svg/plus-circle-svgrepo-com.svg' onClick={handleClick} id={el.id} className='add'  alt='add-svg'></img>
+                        <img src={process.env.PUBLIC_URL + '/svg/plus-circle-svgrepo-com.svg'} onClick={handleClick} id={el.id} className='add'  alt='add-svg'></img>
                         <p>{
                             cart.filter(item => item[0].id === el.id).length
                         }</p>
-                        <img src='../svg/minus-circle-svgrepo-com.svg' onClick={handleClick} id={el.id} className='remove' alt='remove-svg'></img>
+                        <img src={process.env.PUBLIC_URL + '/svg/minus-circle-svgrepo-com.svg'} onClick={handleClick} id={el.id} className='remove' alt='remove-svg'></img>
                     </div>
                 </div>
             )

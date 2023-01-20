@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <div className='landing-page'>
                 <div id="video-wrapper">
-                    <video autoPlay muted loop src="./Pocket_Watch_a15___30s___4k_res.mp4" alt='time' onLoadedData={() => onVideoLoad()}>
+                    <video autoPlay muted loop src={process.env.PUBLIC_URL + "/Pocket_Watch_a15___30s___4k_res.mp4"} alt='time' onLoadedData={() => onVideoLoad()}>
                     </video>
                     <div id="citation">
                         <p className="intro">
@@ -90,7 +90,7 @@ const Categories = ({ status }) => {
                             <p>Featured</p>
                             <h5>{dress.name}</h5>
                         </div>
-                        <img src={`../${dress.path}`} alt='vitrine-item-watch'></img>
+                        <img src={process.env.PUBLIC_URL + `${dress.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/dress' >
                         <button className="dress">Discover more</button>
@@ -108,7 +108,7 @@ const Categories = ({ status }) => {
                             <p>Featured</p>
                             <h5>{diver.name}</h5>
                         </div>
-                        <img src={`../${diver.path}`} alt='vitrine-item-watch'></img>
+                        <img src={process.env.PUBLIC_URL + `${diver.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/diver'>
                         <button className="diver">Discover more</button>
@@ -126,7 +126,7 @@ const Categories = ({ status }) => {
                             <p>Featured</p>
                             <h5>{field.name}</h5>
                         </div>
-                        <img src={`../${field.path}`} alt='vitrine-item-watch'></img>
+                        <img src={process.env.PUBLIC_URL + `${field.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/field'>
                         <button className="field">Discover more</button>
@@ -144,7 +144,7 @@ const Categories = ({ status }) => {
                             <p>Featured</p>
                             <h5>{pilot.name}</h5>
                         </div>
-                        <img src={`../${pilot.path}`} alt='vitrine-item-watch'></img>
+                        <img src={process.env.PUBLIC_URL + `${pilot.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/pilot'>
                         <button className="pilot">Discover more</button>
@@ -162,7 +162,7 @@ const Categories = ({ status }) => {
                             <p>Featured</p>
                             <h5>{racer.name}</h5>
                         </div>
-                        <img src={`../${racer.path}`} alt='vitrine-item-watch'></img>
+                        <img src={process.env.PUBLIC_URL + `${racer.path}`} alt='vitrine-item-watch'></img>
                     </div>
                     <Link to='shopping/racer'>
                         <button className="racer">Discover more</button>

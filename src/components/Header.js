@@ -14,7 +14,7 @@ export default function Header({count}){
             </div>
             <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}} className='cart-shortcut-container'>
                 <div id='cart-shortcut'>
-                    <img src='../svg/shopping-bag-svgrepo-com.svg' width='30px' alt="cart-svg"></img>
+                    <img src={process.env.PUBLIC_URL + '/svg/shopping-bag-svgrepo-com.svg'} width='30px' alt="cart-svg"></img>
                     <p id='items-count'>{count}</p>
                 </div>
             </NavLink>

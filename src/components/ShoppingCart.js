@@ -4,7 +4,7 @@ export default function ShoppingCart({ cart, removeItem }) {
     const items = itemsInCart.map(el => {
         return (
             <div className="added-item-container" key={el.id}>
-                <img src={el[0].path} alt='cart-product-display'></img>
+                <img src={process.env.PUBLIC_URL + el[0].path} alt='cart-product-display'></img>
                 <div className="added-item-description">
                     <h3>{el[0].name}</h3>
                     <h5>{el[0].price}</h5>
