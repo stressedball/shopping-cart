@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/stressedball/shopping-cart/static/css/main.5900310a.css",
-    "main.js": "/stressedball/shopping-cart/static/js/main.56b56d1b.js",
-    "static/media/deep2.jpg": "/stressedball/shopping-cart/static/media/deep2.a0ef0c8a192504f9096e.jpg",
-    "static/media/dress.jpg": "/stressedball/shopping-cart/static/media/dress.edf6b3059fba1800c427.jpg",
-    "static/media/field.jpg": "/stressedball/shopping-cart/static/media/field.fca3752a286f88fd364b.jpg",
-    "static/media/racer.jpg": "/stressedball/shopping-cart/static/media/racer.2d22c9f3f93f3cb92e4b.jpg",
-    "static/media/pilot.jpg": "/stressedball/shopping-cart/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
-    "index.html": "/stressedball/shopping-cart/index.html",
-    "main.5900310a.css.map": "/stressedball/shopping-cart/static/css/main.5900310a.css.map",
-    "main.56b56d1b.js.map": "/stressedball/shopping-cart/static/js/main.56b56d1b.js.map"
+    "main.css": "/shopping-cart/static/css/main.8e4ac2c4.css",
+    "main.js": "/shopping-cart/static/js/main.e1cdc388.js",
+    "static/media/deep2.jpg": "/shopping-cart/static/media/deep2.a0ef0c8a192504f9096e.jpg",
+    "static/media/dress.jpg": "/shopping-cart/static/media/dress.edf6b3059fba1800c427.jpg",
+    "static/media/field.jpg": "/shopping-cart/static/media/field.fca3752a286f88fd364b.jpg",
+    "static/media/racer.jpg": "/shopping-cart/static/media/racer.2d22c9f3f93f3cb92e4b.jpg",
+    "static/media/pilot.jpg": "/shopping-cart/static/media/pilot.f00ea4ee55c9e767e82b.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.8e4ac2c4.css.map": "/shopping-cart/static/css/main.8e4ac2c4.css.map",
+    "main.e1cdc388.js.map": "/shopping-cart/static/js/main.e1cdc388.js.map"
   },
   "entrypoints": [
-    "static/css/main.5900310a.css",
-    "static/js/main.56b56d1b.js"
+    "static/css/main.8e4ac2c4.css",
+    "static/js/main.e1cdc388.js"
   ]
 }
