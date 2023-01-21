@@ -6,7 +6,7 @@ video {
     height: auto;
 }
 
-#small-screen-pic{
+#small-screen-pic {
     max-width: 100%;
 }
 
@@ -14,16 +14,16 @@ video {
     position: relative;
 }
 
-#small-screen-pic + .vitrine-photo-credits {
+#small-screen-pic+.vitrine-photo-credits {
     position: absolute;
     top: 0;
     padding-left: 2rem;
+    background-color: #ffffff96;
 }
 
 #citation {
-    color: white;
     position: absolute;
-    top: 50%;
+    top: 40vh;
     width: 100%;
     margin: auto;
 }
@@ -36,7 +36,7 @@ p.intro {
 
 p.intro:nth-of-type(1) {
     font-family: 'Playfair Display', serif;
-    /* font-size: 1.8rem; */
+    font-size: 1.8rem;
 }
 
 @keyframes fadeIn {
@@ -70,10 +70,8 @@ p.intro:nth-of-type(1) {
 
 .vitrine-container {
     position: relative;
-    border: 1px solid white;
     animation: vitrine-fade-out 800ms forwards linear;
     text-align: center;
-    color: white;
     width: 90vw;
     gap: 2rem;
 }
@@ -104,22 +102,18 @@ p.intro:nth-of-type(1) {
 }
 
 .vitrine-category {
-    background: #000000c9;
     padding: 2rem;
-    color: white;
-    box-shadow: 0 2px 4px 2px white;
+    font-weight: 600;
+    /* color: var(--main-color); */
+    /* background-color: var(--container-background-color); */
 }
 
-.vitrine-category > * {
-    margin: 0.5rem 0 0.5rem 0;
-}
 .vitrine-category button {
     background: none;
     border: 1px solid white;
-    color: white;
     font-size: 1.25rem;
-    padding: 0.3rem;
-    width: 270px;
+    padding: 0.6rem;
+    color: var(--main-color);
 }
 
 .vitrine-category button:hover {
@@ -134,20 +128,7 @@ p.intro:nth-of-type(1) {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1rem;
-}
-
-.featured {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 1rem;
-    font-size: 2rem;
-}
-
-.featured>* {
-    padding: 0;
-    margin: 0;
+    margin: auto;
 }
 
 .reveal {
@@ -155,19 +136,15 @@ p.intro:nth-of-type(1) {
 }
 
 img[alt="vitrine-item-watch"] {
-    width: clamp(200px, 300px, 450px);
+    height: 300px;
 }
-
-/* img[alt="vitrine-item-image"] {
-    height: 800px;
-} */
 
 .vitrine-photo-credits {
     position: absolute;
-    /* background-color: rgba(168, 168, 168, 0.801); */
     padding: 0.3rem;
     font-size: 1rem;
     left: 0;
+    top: 0;
 }
 
 .vitrine-photo-credits a {
@@ -199,10 +176,10 @@ img[alt="vitrine-item-watch"] {
 }
 
 @media screen and (max-width : 800px) {
-    .featured{
+    .featured {
         font-size: 1.2rem;
     }
-    .vitrine-category > * {
-        margin: 1rem 0 1rem 0;
+    #vitrine{
+        gap: 0.4rem;
     }
 }

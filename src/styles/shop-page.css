@@ -7,7 +7,7 @@
     flex: 1 0 auto;
     align-items: center;
     gap: 3rem;
-    padding: 0 5rem 0 5rem;
+    color: var(--text-color);
 }
 
 .shop-container h3 {
@@ -19,14 +19,14 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 1px 5px 0px darkgray;
-    border-radius: 8px;
+    border-bottom: 1px solid ;
 }
 
 .carrousel-shop-page {
     display: flex;
     flex-direction: row;
     gap: 0.8rem;
+    max-width: calc(100vw - 170px);
 }
 
 .carrousel-container {
@@ -49,35 +49,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-button.more-info {
-    width: 100%;
-    padding: 0.7rem;
-    border: none;
-    background: darkgrey;
-    border-radius: 8px;
+    text-align: center;
 }
 
 button.more-info:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--buttons-color);
+    font-weight: 700;
 }
 
 .img-container {
-    height: 310px;
-    width: 310px;
     display: flex;
+    width: 300px;
+    height: 300px;
 }
 
 img[alt='watch-carrousel'] {
-    height: 250px;
+    max-height: 90%;
+    max-width: 90%;
     margin: auto;
 }
 
 img[alt='add-svg'],
 img[alt='remove-svg'] {
     width: 30px;
+    filter: invert(99%) sepia(3%) saturate(2127%) hue-rotate(299deg) brightness(109%) contrast(91%);
 }
 
 img[alt='add-svg']:hover {
@@ -90,14 +86,24 @@ img[alt='remove-svg']:hover {
 
 img.arrow {
     width: 40px;
-    box-shadow: 0 1px 1px 1px black;
-    background-color: inherit;
+    height: 40px;
+    position: fixed;
+    top: 50vh;
 }
 
-img.arrow:hover {
-    background-color: #67809c;
+img.arrow.right{
+    right: 40px;
 }
 
 img.arrow.left {
-    transform: rotate(180deg);
+    left: 40px;
+}
+
+@media screen and (max-width : 530px) {
+    .img-container{
+        max-width: 300px;
+        max-height: 300px;
+        width: unset;
+        height: unset;
+    }
 }

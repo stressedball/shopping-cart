@@ -41,7 +41,7 @@ export default function ItemDisplay({ addToCart }) {
         <>
             <div className="item-vitrine">
                 <div className='carrousel-watch-display'>
-                    <img id='left' data-handle={watch.id} onClick={getPrevious} className='arrow left' src={process.env.PUBLIC_URL + '/svg/right-arrow-svgrepo-com.svg'} alt='arrow-navigation'></img>
+                    <img id='left' data-handle={watch.id} onClick={getPrevious} className='arrow left filter-img' src={process.env.PUBLIC_URL + '/svg/arrow-button-left-2-svgrepo-com.svg'} alt='arrow-navigation'></img>
                     <div className="item-container">
                         <div className="watch-display-container">
                             <img src={process.env.PUBLIC_URL + `${watch.path}`} alt="watch-display"></img>
@@ -57,7 +57,7 @@ export default function ItemDisplay({ addToCart }) {
                             </div>
                         </div>
                     </div>
-                    <img className='arrow right' src={process.env.PUBLIC_URL + '/svg/right-arrow-svgrepo-com.svg'} id='right' data-handle={watch.id} onClick={getNext} alt='arrow-navigation'></img>
+                    <img className='arrow right filter-img' src={process.env.PUBLIC_URL + '/svg/arrow-button-right-2-svgrepo-com.svg'} id='right' data-handle={watch.id} onClick={getNext} alt='arrow-navigation'></img>
                 </div>
             </div>
             <div className="return-container">

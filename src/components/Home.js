@@ -11,8 +11,14 @@ export default function Home() {
     let video = null
     const width = window.innerWidth
     if (width > 700) {
-        video = <video id="that-video" autoPlay muted loop src={process.env.PUBLIC_URL + "/Pocket_Watch_a15___30s___4k_res.mp4"} alt='time' onLoadedData={() => onVideoLoad()}>
-        </video>
+        video =
+            <div>
+                <video id="that-video" autoPlay muted loop src={process.env.PUBLIC_URL + "/Pocket_Watch_a15___30s___4k_res.mp4"} alt='time' onLoadedData={() => onVideoLoad()}>
+                </video>
+                <div className="vitrine-photo-credits">
+                    <a href="http://www.videezy.com">Stock video by Videezy!</a>
+                </div>
+            </div>
     } else {
         video =
             <>
@@ -103,9 +109,11 @@ const Categories = ({ status }) => {
                     <div className="vitrine-items" >
                         <div className='featured'>
                             <p>Featured</p>
-                            <h5>{dress.name}</h5>
+                            <p>{dress.name}</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + `${dress.path}`} alt='vitrine-item-watch'></img>
+                        <div className="vitrine-img-container">
+                            <img src={process.env.PUBLIC_URL + `${dress.path}`} alt='vitrine-item-watch'></img>
+                        </div>
                     </div>
                     <Link to='shopping/dress' >
                         <button className="dress">Discover more</button>
@@ -121,9 +129,11 @@ const Categories = ({ status }) => {
                     <div className="vitrine-items" >
                         <div className='featured'>
                             <p>Featured</p>
-                            <h5>{diver.name}</h5>
+                            <p>{diver.name}</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + `${diver.path}`} alt='vitrine-item-watch'></img>
+                        <div className="vitrine-img-container">
+                            <img src={process.env.PUBLIC_URL + `${diver.path}`} alt='vitrine-item-watch'></img>
+                        </div>
                     </div>
                     <Link to='shopping/diver'>
                         <button className="diver">Discover more</button>
@@ -139,9 +149,11 @@ const Categories = ({ status }) => {
                     <div className="vitrine-items" >
                         <div className='featured'>
                             <p>Featured</p>
-                            <h5>{field.name}</h5>
+                            <p>{field.name}</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + `${field.path}`} alt='vitrine-item-watch'></img>
+                        <div className="vitrine-img-container">
+                            <img src={process.env.PUBLIC_URL + `${field.path}`} alt='vitrine-item-watch'></img>
+                        </div>
                     </div>
                     <Link to='shopping/field'>
                         <button className="field">Discover more</button>
@@ -157,9 +169,11 @@ const Categories = ({ status }) => {
                     <div className="vitrine-items" >
                         <div className='featured'>
                             <p>Featured</p>
-                            <h5>{pilot.name}</h5>
+                            <p>{pilot.name}</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + `${pilot.path}`} alt='vitrine-item-watch'></img>
+                        <div className="vitrine-img-container">
+                            <img src={process.env.PUBLIC_URL + `${pilot.path}`} alt='vitrine-item-watch'></img>
+                        </div>
                     </div>
                     <Link to='shopping/pilot'>
                         <button className="pilot">Discover more</button>
@@ -175,9 +189,11 @@ const Categories = ({ status }) => {
                     <div className="vitrine-items" >
                         <div className='featured'>
                             <p>Featured</p>
-                            <h5>{racer.name}</h5>
+                            <p>{racer.name}</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + `${racer.path}`} alt='vitrine-item-watch'></img>
+                        <div className="vitrine-img-container">
+                            <img src={process.env.PUBLIC_URL + `${racer.path}`} alt='vitrine-item-watch'></img>
+                        </div>
                     </div>
                     <Link to='shopping/racer'>
                         <button className="racer">Discover more</button>

@@ -12,9 +12,13 @@ export default function Header({count}){
                 <NavLink to={`/shopping-cart/shopping/${category}`} role='shopping-link'>Shop</NavLink>
                 <NavLink to={'/about'} >About</NavLink>
             </div>
+            <div className="logo-container">
+                <img className="filter-img" alt="logo-watch" src={process.env.PUBLIC_URL + '/watch-svgrepo-com.svg'}></img>
+                <h1>TIME KEEPER</h1>
+            </div>
             <NavLink to='/cart' role='shopping-cart' style={{ textDecoration : 'none'}} className='cart-shortcut-container'>
                 <div id='cart-shortcut'>
-                    <img src={process.env.PUBLIC_URL + '/svg/shopping-bag-svgrepo-com.svg'} width='30px' alt="cart-svg"></img>
+                    <img className="filter-img" src={process.env.PUBLIC_URL + '/svg/shopping-bag-svgrepo-com.svg'} width='30px' alt="cart-svg"></img>
                     <p id='items-count'>{count}</p>
                 </div>
             </NavLink>
