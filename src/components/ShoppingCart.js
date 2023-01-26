@@ -1,3 +1,4 @@
+import uniqid from 'uniqid'
 export default function ShoppingCart({ cart, removeItem }) {
     const itemsInCart = cart
     const handleClick = (e) => { removeItem(e.target.id) }
@@ -16,7 +17,7 @@ export default function ShoppingCart({ cart, removeItem }) {
     let total = 0
     itemsInCart.map(el => total += Number(el[0].price))
     return (
-        <div className='shop-list-container'>
+        <div className='shop-list-container' key={uniqid()}>
             <h4>Your selection</h4>
             <div className="items-container">
                 {items}

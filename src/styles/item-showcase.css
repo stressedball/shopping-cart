@@ -21,14 +21,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background: var(--container-color);
 }
 
 .watch-display-container {
     display: flex;
     height: 400px;
     width: 400px;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
 }
 
 img[alt='watch-display'] {
