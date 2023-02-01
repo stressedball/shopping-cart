@@ -53,7 +53,7 @@
 }
 
 button.more-info:hover {
-    background-color: var(--main-color);
+    background-color: #ffffff96;
     color: var();
     font-weight: 700;
 }

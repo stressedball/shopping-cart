@@ -24,11 +24,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 1px solid white;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.8rem;
     max-width: 250px;
+    border-radius: 25px;
+    box-shadow: 0 0 3px 0 white;
 }
 
 img[alt='cart-product-display'] {
@@ -44,4 +46,8 @@ img[alt='cart-product-display'] {
 
 .added-item-description h3 {
     font-size: 1.2rem;
+}
+
+.added-item-description button:hover {
+    background-color: #ffffff96;
 }

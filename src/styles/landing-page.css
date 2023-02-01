@@ -26,6 +26,7 @@ video {
     top: 40vh;
     width: 100%;
     margin: auto;
+    color: hsl(var(--h-text), calc(var(--l-text) + 30%), calc(var(--l-text) + 50%));
 }
 
 p.intro {
@@ -104,7 +105,7 @@ p.intro:nth-of-type(1) {
 .vitrine-category {
     padding: 2rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: hsl(var(--h-background), var(--s-background), calc(var(--l-background) + 20%));
     background : var(--container-color);
 }
 
@@ -112,6 +113,12 @@ p.intro:nth-of-type(1) {
     border: 1px solid white;
     font-size: 1.25rem;
     padding: 0.6rem;
+    color: hsl(var(--h-background), var(--s-background), calc(var(--l-background) + 20%));
+}
+
+.vitrine-category button:hover {
+    background-color: #ffffff96;
+    color: var(--text-color);
 }
 
 .vitrine-items {
@@ -138,10 +145,11 @@ img[alt="vitrine-item-watch"] {
     font-size: 1rem;
     left: 0;
     top: 0;
+    color: white
 }
 
 .vitrine-photo-credits a {
-    color: inherit
+    color: white
 }
 
 @keyframes vitrine-fade-in {

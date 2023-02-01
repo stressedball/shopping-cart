@@ -12,12 +12,15 @@
 @import url('./styles/checkout.css');
 
 :root {
-    --h-text : 50;
-    --s-text : 74%;
-    --l-text : 50%;
-    --background-color : #bdbdbd;
-    --text-color : hsl(29, 68%, 32%);
-    --container-color : linear-gradient(#b6aeae, rgba(165, 165, 165, 0.15));
+    --h-text : 29;
+    --s-text : 16%;
+    --l-text : 26%;
+    --h-background: 0;
+    --s-background: 0%;
+    --l-background: 74%;
+    --background-color : hsl(0, 0%, 74%);
+    --text-color : hsl(29, 16%, 26%);
+    --container-color : linear-gradient(#0f090994, rgba(165, 165, 165, 0.15));
     --button-border-color : var(--text-color);
 }
 
@@ -62,7 +65,7 @@ footer {
     flex-direction: row;
     font-size: 1.5rem;
     width: 100vw;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-weight: 600;
     border-bottom: 1px solid var(--secondary-second);
@@ -76,6 +79,7 @@ footer {
 }
 
 .logo-container {
+    flex: 1 0 auto; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -89,9 +93,11 @@ img[alt="logo-watch"] {
 }
 
 #links {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    padding-left: 1rem;
 }
 
 #links a {
@@ -106,9 +112,11 @@ img[alt="logo-watch"] {
 }
 
 #cart-shortcut {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: row;
     gap: 0.4rem;
+    padding-right: 1rem;
 }
 
 img[alt='cart-svg'] {

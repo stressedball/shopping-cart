@@ -52,6 +52,9 @@ img[alt='watch-display'] {
     padding: 3rem;
 }
 
+.return-container button:hover{
+    background-color: #ffffff96;
+}
 
 .add-to-cart {
     display: flex;
@@ -60,6 +63,9 @@ img[alt='watch-display'] {
     margin-top: 5vh;
 }
 
+.add-to-cart button:hover{
+    background-color: #ffffff96;
+}
 
 .to-add::after {
     content: 'Add to collection'
